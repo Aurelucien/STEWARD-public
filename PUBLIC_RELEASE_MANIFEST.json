@@ -1,5 +1,5 @@
 {
-  "collection_sha256": "5f86190b06908dc544cbdade3722b4b77d2bb2c238d8c4535810cc30b7834581",
+  "collection_sha256": "4ceafcb5f4404bd5f3b2fa2031be82514cfd7f8ff2b7dd686b5c2178f580f148",
   "file_count": 276,
   "files": [
     {
@@ -10,7 +10,7 @@
     {
       "bytes": 828,
       "path": ".github/workflows/ci.yml",
-      "sha256": "885247eb3308a3f13e79aa468614f4f5ef65faafd1af7a64a202dade440b0acb"
+      "sha256": "6ec78952c290c3696b07c3e9505375132e19d9de9a6635d9cfaf2d935eaa616d"
     },
     {
       "bytes": 552,
@@ -143,9 +143,9 @@
       "sha256": "78d6e785a050ffc328df4e42f016ed056ed82a79e11595ff4440ae210df27315"
     },
     {
-      "bytes": 2126,
+      "bytes": 2127,
       "path": "pyproject.toml",
-      "sha256": "5f519a337a1c45152d4196a66c49d4bf8f216c04480589643296e877ae755f7e"
+      "sha256": "58e999528a393d0eb195517eccfdaea17b3d034de0a8a1fbd62e5b4eb2c23755"
     },
     {
       "bytes": 7731,
