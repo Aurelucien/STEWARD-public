@@ -16,6 +16,7 @@ def test_public_path_policy_excludes_private_runtime_artifacts() -> None:
     assert is_public_path("tests/test_storage_query.py")
     assert is_public_path("docs/ARCHITECTURE.md")
     assert is_public_path("docs/EVIDENCE-AND-STORAGE.md")
+    assert is_public_path("docs/SUPPORTED-ENVIRONMENTS.md")
     assert is_public_path("LICENSE")
     assert not is_public_path("STATUS.md")
     assert not is_public_path("docs/STATUS-HISTORY.md")
@@ -50,6 +51,7 @@ def test_public_export_is_bounded_sanitized_and_deterministic(tmp_path: Path) ->
     assert first["file_count"] > 250
     assert first["collection_sha256"] == second["collection_sha256"]
     assert (first_root / "README.md").is_file()
+    assert (first_root / "docs/SUPPORTED-ENVIRONMENTS.md").is_file()
     assert (first_root / "src/local_steward/cli.py").is_file()
     assert not (first_root / "STATUS.md").exists()
     assert not (first_root / "experiments/steward_exoskeleton/acceptance").exists()

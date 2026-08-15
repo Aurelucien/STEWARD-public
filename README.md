@@ -30,13 +30,22 @@ STEWARD does **not** organize, move, delete, quarantine, or rewrite user files. 
 not a malware scanner and does not claim that historical Snapshots describe the
 current filesystem.
 
-## Requirements
+## Supported environment
 
-- macOS
-- Python 3.11 or newer
-- SQLite
-- FFmpeg/FFprobe for audio and video inspection
-- Optional parser/media dependencies for the formats you want to inspect
+STEWARD's supported core environment is macOS, Python 3.11 or newer, and the
+SQLite runtime bundled with Python. The public release lane currently validates
+macOS 14 on Apple silicon (`arm64`) with Python 3.11.x. Newer Python versions,
+Intel Mac, Linux, and Windows are not currently release-gated; package installation
+alone should not be read as a compatibility guarantee.
+
+FFmpeg/FFprobe is required only for audio and video inspection. Deep document,
+OCR, ASR, alignment, diarization, and visual-semantic operations require their
+corresponding optional dependencies and pre-provisioned local model assets. The
+core Snapshot and historical-query paths do not require the media stack.
+
+See [Supported environments](docs/SUPPORTED-ENVIRONMENTS.md) for the validated
+platform, installation profiles, external tools, model assets, and Codex/MCP host
+requirements.
 
 ## Installation
 
@@ -179,6 +188,7 @@ acceptance transcripts, and superseded plugin archives.
 - [Architecture](docs/ARCHITECTURE.md)
 - [Evidence and storage](docs/EVIDENCE-AND-STORAGE.md)
 - [Document and media inspection](docs/DOCUMENT-AND-MEDIA.md)
+- [Supported environments](docs/SUPPORTED-ENVIRONMENTS.md)
 - [Contributing](CONTRIBUTING.md)
 - [Changelog](CHANGELOG.md)
 

@@ -29,6 +29,7 @@ PUBLIC_DOCS = frozenset(
         "docs/CAPABILITIES.md",
         "docs/DOCUMENT-AND-MEDIA.md",
         "docs/EVIDENCE-AND-STORAGE.md",
+        "docs/SUPPORTED-ENVIRONMENTS.md",
     }
 )
 

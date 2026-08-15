@@ -12,6 +12,21 @@ source facts distinct from model-derived observations.
 | Audio | WAV, FLAC, MP3, M4A, AAC, OGG, Opus | streams, speech regions, ASR, optional aligned words and anonymous turns |
 | Video | MP4/M4V, MOV, MKV, WebM | streams, chapters, subtitles, scenes, frames, OCR, ASR, visual candidates |
 
+## Runtime requirements
+
+Document and media support is layered rather than enabled by the core installation.
+Lightweight document paths use `document-fast`; Docling-backed structure uses
+`document-deep`; speech processing uses `audio` and optionally `audio-advanced`.
+Audio and video operations require FFmpeg/FFprobe. OCR, ASR, alignment, diarization,
+and visual-semantic operations also require the relevant model assets to have been
+provisioned locally before the read.
+
+Installing an extra does not guarantee that every operation in that family is ready.
+Run `runtime capabilities` to check the actual parsers, binaries and host assets.
+See [Supported environments](SUPPORTED-ENVIRONMENTS.md) for the complete environment
+matrix. Missing optional components yield a typed degraded or unavailable result;
+they do not disable Snapshot and historical-query workflows.
+
 ## Routing
 
 The parser chooses the lowest-cost route that can answer the requested question:

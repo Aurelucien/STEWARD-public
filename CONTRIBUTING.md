@@ -5,6 +5,11 @@ adapters, and reproducible performance work.
 
 ## Development setup
 
+The public CI release lane uses GitHub-hosted macOS 14 on Apple silicon with Python
+3.11.x. Contributors may develop on other hosts, but a passing local run on an
+unlisted platform does not establish public compatibility. See
+[Supported environments](docs/SUPPORTED-ENVIRONMENTS.md) for the current matrix.
+
 ```bash
 python3 -m venv .venv
 .venv/bin/python -m pip install --upgrade pip

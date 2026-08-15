@@ -36,6 +36,12 @@
 | `audio-advanced` | Alignment and diarization dependencies |
 | `full` | Complete optional local parsing stack |
 
+An installed extra describes which Python dependencies were requested; it is not a
+claim that external binaries or model assets are present. The release-gated platform
+and the requirements for each profile are listed in
+[Supported environments](SUPPORTED-ENVIRONMENTS.md). Use `runtime capabilities` to
+inspect the effective capability set on the current host.
+
 ## Important limits
 
 - Admission ceilings prevent unbounded source or expanded-container processing; they
