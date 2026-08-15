@@ -183,7 +183,7 @@ def test_production_dependency_profiles_separate_core_fast_deep_and_dev() -> Non
         extras["full"]
         | {
             "pytest>=8,<10",
-            "ruff>=0.9,<1",
+            "ruff==0.15.22",
             "mypy>=1.14,<2",
             "types-psutil>=7,<8",
         }

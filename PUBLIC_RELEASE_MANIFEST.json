@@ -1,5 +1,5 @@
 {
-  "collection_sha256": "4ceafcb5f4404bd5f3b2fa2031be82514cfd7f8ff2b7dd686b5c2178f580f148",
+  "collection_sha256": "1fd806eefc9004c905b544e470adbf11d2aee3d970b627f32416bc987d58bcad",
   "file_count": 276,
   "files": [
     {
@@ -1033,9 +1033,9 @@
       "sha256": "80fed31201453841a11271d95e96ce0b2307ca42a1f678a4195f26e7b9287bf1"
     },
     {
-      "bytes": 7311,
+      "bytes": 7312,
       "path": "tests/test_file_agent_structured_document_readiness.py",
-      "sha256": "2d883296bac13eceab5850be2054751415d07e8d90caed478cc31b5552211385"
+      "sha256": "dd755e44a7dae275c589220e87bb1458fd7e5b896d5e4d82e117b8ea81ef3100"
     },
     {
       "bytes": 14375,
