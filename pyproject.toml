@@ -1,0 +1,85 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "local-system-steward"
+version = "0.1.0"
+description = "Local-first verifiable filesystem snapshots and bounded document/media inspection"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.11"
+dependencies = ["psutil>=6,<8", "typer>=0.16,<0.27"]
+
+[project.optional-dependencies]
+agent = ["jsonschema>=4.23,<5", "mcp==1.28.1"]
+document-fast = [
+    "markitdown[docx]==0.1.7",
+    "openpyxl==3.1.5",
+    "pillow>=11,<13",
+    "pymupdf4llm==1.28.2",
+    "python-pptx==1.0.2",
+]
+document-deep = ["docling==2.119.0"]
+audio = [
+    "faster-whisper==1.2.1",
+    "onnxruntime>=1.16.1,<2",
+]
+audio-advanced = [
+    "opencc-python-reimplemented==0.1.7",
+    "sherpa-onnx==1.13.5",
+    "torch>=2.7,<3",
+    "transformers>=5,<6",
+]
+full = [
+    "docling==2.119.0",
+    "jsonschema>=4.23,<5",
+    "markitdown[docx]==0.1.7",
+    "mcp==1.28.1",
+    "faster-whisper==1.2.1",
+    "onnxruntime>=1.16.1,<2",
+    "opencc-python-reimplemented==0.1.7",
+    "openpyxl==3.1.5",
+    "pillow>=11,<13",
+    "pymupdf4llm==1.28.2",
+    "python-pptx==1.0.2",
+    "sherpa-onnx==1.13.5",
+    "torch>=2.7,<3",
+    "transformers>=5,<6",
+]
+dev = [
+    "docling==2.119.0",
+    "jsonschema>=4.23,<5",
+    "markitdown[docx]==0.1.7",
+    "mcp==1.28.1",
+    "faster-whisper==1.2.1",
+    "mypy>=1.14,<2",
+    "onnxruntime>=1.16.1,<2",
+    "opencc-python-reimplemented==0.1.7",
+    "openpyxl==3.1.5",
+    "pillow>=11,<13",
+    "pymupdf4llm==1.28.2",
+    "pytest>=8,<10",
+    "python-pptx==1.0.2",
+    "ruff>=0.9,<1",
+    "sherpa-onnx==1.13.5",
+    "torch>=2.7,<3",
+    "transformers>=5,<6",
+    "types-psutil>=7,<8",
+]
+
+[project.scripts]
+local-steward = "local_steward.cli:app"
+local-steward-mcp = "local_steward.mcp_server.server:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+files = ["src/local_steward"]

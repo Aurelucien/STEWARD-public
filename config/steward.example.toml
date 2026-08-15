@@ -1,0 +1,40 @@
+schema_version = 1
+project_name = "Local System Steward"
+
+[paths]
+data_dir = "data"
+cache_dir = "data/cache"
+evidence_dir = "data/evidence"
+quarantine_dir = "data/quarantine"
+
+[[scopes]]
+scope_id = "downloads"
+role = "managed_root"
+path = "~/Downloads"
+enabled = true
+follow_directory_symlinks = false
+allow_cross_mount = false
+
+[[scopes]]
+scope_id = "desktop_inbox"
+role = "managed_root"
+path = "~/Desktop/Inbox"
+enabled = true
+follow_directory_symlinks = false
+allow_cross_mount = false
+
+[[scopes]]
+scope_id = "dev_inbox"
+role = "managed_root"
+path = "~/Dev/_inbox"
+enabled = true
+follow_directory_symlinks = false
+allow_cross_mount = false
+
+[[scopes]]
+scope_id = "documents_inbox"
+role = "managed_root"
+path = "~/Documents/00_Inbox"
+enabled = true
+follow_directory_symlinks = false
+allow_cross_mount = false

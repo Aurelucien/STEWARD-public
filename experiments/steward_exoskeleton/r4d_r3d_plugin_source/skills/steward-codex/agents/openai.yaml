@@ -1,0 +1,12 @@
+interface:
+  display_name: "STEWARD Codex"
+  short_description: "Read local documents, audio, and video with cited evidence"
+  default_prompt: "Use $steward-codex to answer this local document, audio, or video question with source-pinned native evidence and only the requested analysis depth."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "local-steward-native"
+      description: "Risk-separated native STEWARD service"
+      transport: "stdio"
+policy:
+  allow_implicit_invocation: true
