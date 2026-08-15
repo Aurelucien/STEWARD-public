@@ -12,7 +12,7 @@ requires-python = ">=3.11"
 dependencies = ["psutil>=6,<8", "typer>=0.16,<0.27"]
 
 [project.optional-dependencies]
-agent = ["jsonschema>=4.23,<5", "mcp==1.28.1"]
+agent = ["jsonschema>=4.23,<5", "mcp==2.0.0"]
 document-fast = [
     "markitdown[docx]==0.1.7",
     "openpyxl==3.1.5",
@@ -35,7 +35,7 @@ full = [
     "docling==2.119.0",
     "jsonschema>=4.23,<5",
     "markitdown[docx]==0.1.7",
-    "mcp==1.28.1",
+    "mcp==2.0.0",
     "faster-whisper==1.2.1",
     "onnxruntime>=1.16.1,<2",
     "opencc-python-reimplemented==0.1.7",
@@ -51,7 +51,7 @@ dev = [
     "docling==2.119.0",
     "jsonschema>=4.23,<5",
     "markitdown[docx]==0.1.7",
-    "mcp==1.28.1",
+    "mcp==2.0.0",
     "faster-whisper==1.2.1",
     "mypy>=1.14,<2",
     "onnxruntime>=1.16.1,<2",
