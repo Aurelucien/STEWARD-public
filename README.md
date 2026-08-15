@@ -35,6 +35,7 @@ current filesystem.
 - macOS
 - Python 3.11 or newer
 - SQLite
+- FFmpeg/FFprobe for audio and video inspection
 - Optional parser/media dependencies for the formats you want to inspect
 
 ## Installation
@@ -58,7 +59,9 @@ Smaller dependency profiles are available:
 ```
 
 The `full` and `dev` profiles include the complete local parsing stack and are much
-larger than the core installation.
+larger than the core installation. Alignment, diarization, OCR and visual-semantic
+features also require their pinned local model assets; STEWARD does not download
+models during a read operation.
 
 ## Configuration
 

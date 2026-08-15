@@ -25,7 +25,12 @@ from .test_document_inspection_product import (
 @pytest.mark.parametrize(
     ("name", "writer", "marker"),
     [
-        ("sample.pdf", _write_pdf, "searchable PDF page 1"),
+        pytest.param(
+            "sample.pdf",
+            _write_pdf,
+            "searchable PDF page 1",
+            marks=pytest.mark.host_assets,
+        ),
         ("sample.epub", _write_epub, "EPUB fact marker"),
         ("sample.docx", _write_docx, "DOCX fact marker"),
         ("sample.xlsx", _write_xlsx, "answer"),

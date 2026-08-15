@@ -39,6 +39,7 @@ def test_ctc_backtracking_returns_one_ordered_frame_per_token() -> None:
     assert all(0.99 < score <= 1.0 for _frame, score in frames)
 
 
+@pytest.mark.host_assets
 def test_installed_alignment_capability_is_local_path_free_and_pinned() -> None:
     capability = alignment_runtime_capabilities()
 

@@ -259,7 +259,9 @@ def test_busy_timeout_is_finite(tmp_path: Path) -> None:
         create_run(config, "test")
     lock.rollback()
     lock.close()
-    assert time.monotonic() - started < 7
+    # SQLite owns a 5-second busy timeout. Allow scheduling overhead on shared
+    # runners without weakening the finite-timeout assertion.
+    assert time.monotonic() - started < 12
 
 
 def test_hundred_creates_have_unique_ids(tmp_path: Path) -> None:

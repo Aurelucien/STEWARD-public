@@ -74,6 +74,9 @@ local-steward-mcp = "local_steward.mcp_server.server:main"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+markers = [
+    "host_assets: requires optional local binaries or pinned model assets not installed by portable CI",
+]
 
 [tool.ruff]
 target-version = "py311"

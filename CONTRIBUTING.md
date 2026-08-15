@@ -21,6 +21,10 @@ Run the standard checks before submitting a change:
 git diff --check
 ```
 
+The public CI profile runs `pytest -m "not host_assets"`. Tests marked
+`host_assets` require optional local binaries or pinned model assets and remain part
+of the full local suite; the marker must not be used to hide a portable regression.
+
 ## Change expectations
 
 - Preserve the distinction between source data, immutable Evidence, derived indexes,

@@ -109,6 +109,7 @@ async def test_view_accepts_a_graph_node_and_returns_its_bounded_region(tmp_path
 
 
 @pytest.mark.anyio
+@pytest.mark.host_assets
 async def test_png_is_discoverable_readable_and_directly_viewable(tmp_path: Path) -> None:
     config, scope, session = _session(tmp_path)
     source = scope / "fact.png"
@@ -218,6 +219,7 @@ async def test_office_visual_projection_rejects_external_relationships(
     assert sha256(source.read_bytes()).hexdigest() == before
 
 
+@pytest.mark.host_assets
 def test_formula_view_and_visual_actions_are_additive_to_the_five_tool_surface(
     tmp_path: Path,
     monkeypatch: pytest.MonkeyPatch,

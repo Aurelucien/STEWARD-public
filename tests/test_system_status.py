@@ -3,6 +3,7 @@ from pathlib import Path
 
 import pytest
 from typer.testing import CliRunner
+from typer.main import get_command
 
 import local_steward.system_status as status_module
 from local_steward.change_semantics import ChangeEventType
@@ -48,12 +49,15 @@ def _invalidate_snapshot_evidence(path: Path) -> None:
 
 
 def test_status_command_is_registered_with_resource_options() -> None:
-    result = CliRunner().invoke(app, ["status", "--help"])
+    root = get_command(app)
+    status = root.commands["status"]
+    options = {
+        option
+        for parameter in status.params
+        for option in getattr(parameter, "opts", ())
+    }
 
-    assert result.exit_code == 0
-    assert "--sample-seconds" in result.stdout
-    assert "--top" in result.stdout
-    assert "--sort" in result.stdout
+    assert {"--sample-seconds", "--top", "--sort"} <= options
 
 
 def test_status_uses_resource_defaults_and_renders_all_sections(

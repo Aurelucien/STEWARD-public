@@ -39,6 +39,7 @@ def _wav(path: Path, *, seconds: int = 1, sample_rate: int = 16_000) -> None:
         target.writeframes(b"\0\0" * sample_rate * seconds)
 
 
+@pytest.mark.host_assets
 def test_ffprobe_admits_one_audio_stream_and_capabilities_are_path_free(tmp_path: Path) -> None:
     source = tmp_path / "bounded.wav"
     _wav(source, seconds=2)
@@ -227,6 +228,7 @@ def test_audio_filename_discovery_normalizes_unicode_composition() -> None:
 
 
 @pytest.mark.anyio
+@pytest.mark.host_assets
 async def test_native_structure_routes_unique_audio_without_running_asr(
     tmp_path: Path, monkeypatch: pytest.MonkeyPatch
 ) -> None:

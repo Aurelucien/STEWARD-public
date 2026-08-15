@@ -214,6 +214,7 @@ def _write_evidence_pdf(path: Path) -> None:
     document.close()
 
 
+@pytest.mark.host_assets
 def test_pdf_evidence_uses_fast_map_then_targeted_deep_parse(
     tmp_path: Path, monkeypatch: pytest.MonkeyPatch
 ) -> None:

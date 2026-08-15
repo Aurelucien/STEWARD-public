@@ -66,6 +66,7 @@ def test_core_cli_import_does_not_load_agent_or_document_backends() -> None:
     assert json.loads(completed.stdout) == []
 
 
+@pytest.mark.host_assets
 def test_runtime_capabilities_are_path_free_deterministic_and_complete_here() -> None:
     first = inspect_runtime_capabilities()
     second = inspect_runtime_capabilities()
