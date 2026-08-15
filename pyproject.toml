@@ -9,7 +9,7 @@ description = "Local-first verifiable filesystem snapshots and bounded document/
 readme = "README.md"
 license = {file = "LICENSE"}
 requires-python = ">=3.11"
-dependencies = ["psutil>=6,<8", "typer>=0.16,<0.27"]
+dependencies = ["psutil>=6,<8", "typer>=0.16,<0.28"]
 
 [project.optional-dependencies]
 agent = ["jsonschema>=4.23,<5", "mcp==1.28.1"]
