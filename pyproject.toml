@@ -27,7 +27,7 @@ audio = [
 ]
 audio-advanced = [
     "opencc-python-reimplemented==0.1.7",
-    "sherpa-onnx==1.13.5",
+    "sherpa-onnx==1.13.8",
     "torch>=2.7,<3",
     "transformers>=5,<6",
 ]
@@ -43,7 +43,7 @@ full = [
     "pillow>=11,<13",
     "pymupdf4llm==1.28.2",
     "python-pptx==1.0.2",
-    "sherpa-onnx==1.13.5",
+    "sherpa-onnx==1.13.8",
     "torch>=2.7,<3",
     "transformers>=5,<6",
 ]
@@ -62,7 +62,7 @@ dev = [
     "pytest>=8,<10",
     "python-pptx==1.0.2",
     "ruff==0.15.22",
-    "sherpa-onnx==1.13.5",
+    "sherpa-onnx==1.13.8",
     "torch>=2.7,<3",
     "transformers>=5,<6",
     "types-psutil>=7,<8",
